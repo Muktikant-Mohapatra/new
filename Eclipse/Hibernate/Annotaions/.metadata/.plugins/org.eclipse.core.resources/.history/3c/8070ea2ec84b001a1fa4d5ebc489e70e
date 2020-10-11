@@ -1,0 +1,53 @@
+package com.annotation;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "book_id")
+public class Book extends Publisher {
+	@Column
+	private String name;
+	@Column
+	private String book_key;
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Users user;
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Publisher publisher;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getBook_key() {
+		return book_key;
+	}
+
+	public void setBook_key(String book_key) {
+		this.book_key = book_key;
+	}
+
+	public Users getUser() {
+		return user;
+	}
+
+	public void setUser(Users user) {
+		this.user = user;
+	}
+
+	public Publisher getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(Publisher publisher) {
+		this.publisher = publisher;
+	}
+
+}

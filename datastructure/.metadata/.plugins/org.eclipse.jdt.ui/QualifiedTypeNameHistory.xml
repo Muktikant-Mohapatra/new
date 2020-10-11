@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="dynamic_array.DynamicArray"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="linkedList.LinkedList"/>
+<fullyQualifiedTypeName name="linkedList.LinkedList.Node"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="selection_sorting_algorithm.SelectionSortingAlgorithm"/>
+<fullyQualifiedTypeName name="bubble_sort_algorithm.BubbleSortAlgorithm"/>
+<fullyQualifiedTypeName name="insertion_sorting_algorithm.InsertionSortingAlgorithm"/>
+<fullyQualifiedTypeName name="merge_sort_algorithm.MergeSortAlgorithm"/>
+</qualifiedTypeNameHistroy>

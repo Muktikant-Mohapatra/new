@@ -1,0 +1,103 @@
+package com.parking.service;
+
+import java.util.Calendar;
+import java.util.Random;
+
+import com.parking.domain.model.ParkingLot;
+import com.parking.dto.CarDto;
+import com.parking.dto.ParkingReceiptDto;
+
+public class CarParkingService implements ParkingService {
+	private String entryGate;
+	private Object[] parkingArea;
+	private CarDto car;
+	private int parkingSlot;
+	private int noOfVehicle;
+	@Override
+	public void park(CarDto car, ParkingLot parkingLot) {
+		
+		this.entryGate = parkingLot.getEntryGate();
+		this.parkingArea = parkingLot.getParkingArea();
+		this.car = car;
+		if (entryGate == "first") {
+			printReceipt(firstEntryGateParking(parkingLot));
+		}
+		if (entryGate == "last") {
+			printReceipt(lastEntryGateParking(parkingLot));
+		}
+		if (entryGate == "middle") {
+			printReceipt(middleEntryGateParking(parkingLot));
+		}
+	}
+
+	private void printReceipt(int firstEntryGateParking) {
+		Random randomNum = new Random();
+		ParkingReceiptDto dto=new ParkingReceiptDto(randomNum.nextInt() + "-RECEIPT-" + randomNum.nextInt(),car.getRegistrationNumber(), car.getColour(), parkingSlot, Calendar.getInstance().getTime());
+		System.out.println(dto);
+	}
+
+	private void firstEntryGateParking(ParkingLot parkingLot) {
+
+		for (int i = 0; i < parkingArea.length; i++) {
+			if (parkingArea[i] == null) {
+				parkingSlot = i;
+				parkingArea[i] = car;
+				noOfVehicle++;
+				break;
+			}
+		}
+	}
+
+	private void lastEntryGateParking(ParkingLot parkingLot) {
+		for (int i = parkingArea.length - 1; i >= 0; i--) {
+			if (parkingArea[i] == null) {
+				parkingSlot = i;
+				parkingArea[i] = car;
+				noOfVehicle++;
+				break;
+			}
+		}
+	}
+
+	private void middleEntryGateParking(ParkingLot parkingLot) {
+		int middle = parkingArea.length / 2;
+		for (int i = middle - 1, j = middle + 1;( i < middle && i >= 0) && (j > middle && j < parkingArea.length); i--, j++) {
+			if (parkingArea[middle]==null) {
+				parkingSlot=middle;
+				parkingArea[middle]=car;
+				noOfVehicle++;
+				break;
+			}
+			if(((middle-i)==(j-middle))) {
+				if (parkingArea[i]==null) {
+					parkingSlot=i;
+					parkingArea[i]=car;
+					noOfVehicle++;
+					break;
+				}else if(parkingArea[j]==null) {
+					parkingSlot=j;
+					parkingArea[j]=car;
+					noOfVehicle++;
+					break;
+				}
+				
+			}else if(((middle-i)>(j-middle))&&( parkingArea[j]==null)) {
+				parkingSlot=j;
+				parkingArea[j]=car;
+				noOfVehicle++;
+				break;
+			}else if(((middle-i)<(j-middle))&&(parkingArea[i]==null)){
+				parkingSlot=i;
+				parkingArea[i]=car;
+				noOfVehicle++;
+				break;
+			}
+			
+		}
+	}
+	@Override
+	public void unPark(int parkingSlotNumber) {
+       parkingArea[parkingSlotNumber]=null;		
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.parking.service;
+
+import com.parking.domain.model.ParkingLot;
+import com.parking.dto.CarDto;
+
+public interface ParkingService {
+
+	void park(CarDto car, ParkingLot parkingLot) ;
+
+	void unPark(int parkingSlotNumber) ;
+
+	void emptySlot();
+}

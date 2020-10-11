@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1576209125472_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=mob-app-ws/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=mob-app-ws/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1576209125612_1" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=mob-app-ws/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1576209372695_3" label="mob-app-ws" name="mob-app-ws">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mob-app-ws" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1576209145811_2" label="Window Working Set" name="Aggregate for window 1576209145811"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1576212705265_4" label="Window Working Set" name="Aggregate for window 1576212705265"/>
+</workingSetManager>

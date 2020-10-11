@@ -1,0 +1,17 @@
+1591979887287	Copy compilation unit
+1591979893343	Move compilation unit
+1591980986260	Rename type 'ParkingLot'
+1591981000237	Copy compilation unit
+1591981006970	Rename type 'ParkingLotDto'
+1591983081659	Extract local variable 'parkingArea'
+1591985656220	Extract local variable 'j'
+1592022551792	Rename package 'com.parking.dao'
+1592033266378	Rename type 'CarDto'
+1592033273990	Rename type 'ParkingLotDto'
+1592033279709	Rename type 'ParkingReceiptDto'
+1592033285461	Delete elements
+1592033298392	Rename package 'com.parking.dto'
+1592035767324	Rename local variable 'slotNumberArray'
+1592035918737	Extract method 'extracted'
+1592040423138	Extract method 'extracted'
+1592040612970	Extract method 'extracted'

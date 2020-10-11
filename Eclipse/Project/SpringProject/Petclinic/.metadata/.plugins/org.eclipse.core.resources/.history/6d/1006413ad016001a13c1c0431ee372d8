@@ -1,0 +1,10 @@
+package org.Pet.Clinic.Web.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class IndexControllerController {
+ public String homepage() {
+	 return "index";
+ }
+}

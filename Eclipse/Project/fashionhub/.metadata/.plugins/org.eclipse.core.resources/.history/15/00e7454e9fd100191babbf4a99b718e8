@@ -1,0 +1,13 @@
+package com.login.fashionhub.login.service;
+
+import com.login.fashionhub.login.dto.UserCredentialDto;
+
+public class LoginServiceImpl implements LoginService {
+
+	@Override
+	public String UserLogin(UserCredentialDto userDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

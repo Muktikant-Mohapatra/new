@@ -1,0 +1,39 @@
+package selection_sorting_algorithm;
+
+public class SelectionSortingAlgorithm {
+
+	public int[] sort1(int[] values) {
+		int temp=0;
+		
+		for(int i=0;i<values.length;i++) {
+			for (int j = i+1; j < values.length; j++) {
+				if (values[i]>values[j]) {
+                  	temp=values[i];
+                  	values[i]=values[j];
+                  	values[j]=temp;
+				}
+			}
+		}
+		
+		return values;
+	}
+	public int[] sort2(int[] values) {
+		
+		for(int i=0;i<values.length;i++) {
+			int min=values[i];
+			int minId=i;
+			for (int j = i+1; j < values.length; j++) {
+				if (values[j]<min) {
+                  	min=values[j];
+                  	minId=j;
+				}
+				int temp=values[i];
+				values[j]=min;
+				values[minId]=temp;
+			}
+			
+		}
+		
+		return values;
+	}
+}

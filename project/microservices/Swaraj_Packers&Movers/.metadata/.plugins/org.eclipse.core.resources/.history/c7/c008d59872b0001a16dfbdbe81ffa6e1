@@ -1,0 +1,5 @@
+package com.swaraj_packers.movers.user.registration.repository;
+
+public interface RegistrationRepository {
+
+}

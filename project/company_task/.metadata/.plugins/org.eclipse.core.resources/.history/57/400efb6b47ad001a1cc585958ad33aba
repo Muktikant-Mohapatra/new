@@ -1,0 +1,26 @@
+package com.parking.domain.model;
+
+public class Car {
+	private String registrationNumber;
+	private String colour;
+
+	public Car(String registrationNumber, String colour) {
+		super();
+		this.registrationNumber = registrationNumber;
+		this.colour = colour;
+	}
+
+	public String getRegistrationNumber() {
+		return registrationNumber;
+	}
+
+	public String getColour() {
+		return colour;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [registrationNumber=" + registrationNumber + ", colour=" + colour + "]";
+	}
+
+}

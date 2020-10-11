@@ -1,0 +1,4 @@
+spring.banner.image.location=20130611_173800.jpg
+server.port=1111
+
+debug=true

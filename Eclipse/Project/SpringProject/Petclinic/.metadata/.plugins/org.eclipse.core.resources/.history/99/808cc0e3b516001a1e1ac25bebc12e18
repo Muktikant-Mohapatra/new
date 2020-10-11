@@ -1,0 +1,10 @@
+package org.Pet.Clinic.Data.services.map;
+
+public class Snippet {
+	Pet findById(String id);
+	
+		Pet save(Pet pet);
+	
+		Set<Pet> findAll();
+}
+

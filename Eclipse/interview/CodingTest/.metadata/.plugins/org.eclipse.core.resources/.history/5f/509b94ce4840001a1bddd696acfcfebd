@@ -1,0 +1,42 @@
+package interviewQuestions.interview;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+class Student{
+	int roll;
+	int age;
+	public Student(int roll, int age) {
+		super();
+		this.roll = roll;
+		this.age = age;
+	}
+	public int getRoll() {
+		return roll;
+	}
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+}
+public class B {
+	public static void main(String []args) {
+	Student s=new Student(1, 5);
+	Student s1=new Student(1, 6);
+	Student s2=new Student(1, 7);
+	Student s3=new Student(1, 5);
+ ArrayList<Student> arr=new ArrayList<Student>();
+	arr.add(s);
+	arr.add(s1);
+	arr.add(s2);
+	arr.add(s3);
+	Object aa=arr.stream().filter(c ->c.age>6);
+	System.out.println(arr.stream().filter(c ->c.age>6).collect(Collectors.toList()));
+	}
+}

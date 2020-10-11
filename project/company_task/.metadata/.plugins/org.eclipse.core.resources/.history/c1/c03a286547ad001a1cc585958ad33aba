@@ -1,0 +1,21 @@
+package com.parking.dto;
+
+public class ParkingLotDto {
+	private Object[] parkingArea;
+	private String entryGate;// first,last,middle
+
+	public ParkingLotDto(Object[] parkingLot, String entryGate) {
+		super();
+		this.parkingArea = parkingLot;
+		this.entryGate = entryGate;
+	}
+
+	public Object[] getParkingArea() {
+		return parkingArea;
+	}
+
+	public String getEntryGate() {
+		return entryGate;
+	}
+
+}

@@ -1,0 +1,5 @@
+package org.Pet.Clinic.Web.controller;
+
+public class IndexControllerController {
+
+}

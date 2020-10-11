@@ -1,0 +1,19 @@
+package com.spring5.jokeapp.services;
+
+import guru.springframework.norris.chuck.ChuckNorrisQuotes;
+
+public class JokeAppServiceImpl implements JokeAppService {
+private ChuckNorrisQuotes chuckNorrisQuotes;
+
+	
+	public JokeAppServiceImpl() {
+	this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+}
+
+
+	@Override
+public String getJoke() {
+	// TODO Auto-generated method stub
+	return null;
+}
+}

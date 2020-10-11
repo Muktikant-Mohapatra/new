@@ -1,0 +1,5 @@
+package com.login.fashionhub.webConfig;
+
+public class WebSecurityConfig {
+
+}

@@ -1,0 +1,23 @@
+package com.swaraj_packers.movers.user.registration.dao;
+
+import org.springframework.stereotype.Component;
+
+import com.swaraj_packers.movers.user.registration.dto.RegistrationDto;
+import com.swaraj_packers.movers.user.registration.entity.RegistrationEntity;
+
+@Component
+public class RegistrationDaoImpl implements RegistrationDao {
+    
+	private RegistrationRepository registrationRepository;  
+	
+	public RegistrationDaoImpl(RegistrationRepository registrationRepository) {
+		super();
+		this.registrationRepository = registrationRepository;
+	}
+
+	@Override
+	public RegistrationDto createMember(RegistrationEntity userRegistrationEntity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,21 @@
+package com.annotation;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+	@Autowired
+	private UserRepository ur;
+
+	@GetMapping("/users")
+	public String saveUser(@RequestBody UserRequest user) {
+		ModelMapper mapper = new ModelMapper();
+		Users user1 = mapper.map(user, Users.class);
+		System.out.println(ur.findById(user1.getId()));
+		return "success";
+	}
+}

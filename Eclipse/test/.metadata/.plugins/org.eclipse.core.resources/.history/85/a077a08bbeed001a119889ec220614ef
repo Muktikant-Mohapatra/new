@@ -1,0 +1,74 @@
+package test;
+
+public class LongestCommonSubstring {
+
+	public static void main(String[] args) {
+	 int longestCommonSubstring = getLongestCommonSubstring("abcbcdef", "abbccdef");
+	 System.out.println(LCS("abcbcdef", "abbccdef"));
+	 
+
+	}
+		// Function to find Longest common substring of sequences
+		// X[0..m-1] and Y[0..n-1]
+		public static String LCS(String X, String Y)
+		{
+			int m=X.length();
+			int n=Y.length();
+			int maxlen = 0; 		// stores the max length of LCS
+			int endingIndex = m;	// stores the ending index of LCS in X
+
+			// lookup[i][j] stores the length of LCS of substring
+			// X[0..i-1], Y[0..j-1]
+			int[][] lookup = new int[m + 1][n + 1];
+
+			// fill the lookup table in bottom-up manner
+			for (int i = 1; i <= m; i++)
+			{
+				for (int j = 1; j <= n; j++)
+				{
+					// if current character of X and Y matches
+					if (X.charAt(i - 1) == Y.charAt(j - 1))
+					{
+						lookup[i][j] = lookup[i - 1][j - 1] + 1;
+
+						// update the maximum length and ending index
+						if (lookup[i][j] > maxlen)
+						{
+							maxlen = lookup[i][j];
+							endingIndex = i;
+						}
+					}
+				}
+			}
+
+			// return Longest common substring having length maxlen
+			return X.substring(endingIndex - maxlen, endingIndex);
+		}
+
+	public static int getLongestCommonSubstring(String a, String b){
+		int m = a.length();
+		int n = b.length();
+	 
+		int max = 0;
+	 
+		int[][] dp = new int[m][n];
+	 
+		for(int i=0; i<m; i++){
+			for(int j=0; j<n; j++){
+				if(a.charAt(i) == b.charAt(j)){
+					if(i==0 || j==0){
+						dp[i][j]=1;
+					}else{
+						dp[i][j] = dp[i-1][j-1]+1;
+					}
+	 
+					if(max < dp[i][j])
+						max = dp[i][j];
+				}
+	 
+			}
+		}
+	 
+		return max;
+	}
+}

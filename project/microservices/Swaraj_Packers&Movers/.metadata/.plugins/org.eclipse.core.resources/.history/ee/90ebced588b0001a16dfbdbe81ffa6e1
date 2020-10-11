@@ -1,0 +1,5 @@
+package com.swaraj_packers.movers.user.registration.response;
+
+public class RegistrationResponseModel {
+
+}

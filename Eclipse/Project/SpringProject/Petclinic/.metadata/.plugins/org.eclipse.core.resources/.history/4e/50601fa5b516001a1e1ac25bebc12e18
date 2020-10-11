@@ -1,0 +1,8 @@
+package org.Pet.Clinic.Data.services.map;
+
+import org.Pet.Clinic.Data.model.Owner;
+import org.Pet.Clinic.Data.services.CrudService;
+
+public class OwnerServiceMap extends AbstractMapService<Owner, String> implements CrudService<Owner, String> {
+
+}

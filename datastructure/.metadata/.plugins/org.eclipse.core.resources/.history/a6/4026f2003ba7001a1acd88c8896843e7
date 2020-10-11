@@ -1,0 +1,21 @@
+package test;
+
+import bubble_sort_algorithm.BubbleSortAlgorithm;
+import insertion_sorting_algorithm.InsertionSortingAlgorithm;
+import selection_sorting_algorithm.SelectionSortingAlgorithm;
+
+public class AlgorithmTest {
+	public static void main(String[] args) {
+		int[] valueArray=new int[] {15,25,40,30,90,70,100,665};
+         SelectionSortingAlgorithm selectionSortingAlgorithm=new SelectionSortingAlgorithm();
+         BubbleSortAlgorithm bubbleSortAlgorithm=new BubbleSortAlgorithm();
+         InsertionSortingAlgorithm insertionSortingAlgorithm=new InsertionSortingAlgorithm();
+         //int[] sortedValue = selectionSortingAlgorithm.sortDecending(valueArray);
+        // int[] sortedValue=bubbleSortAlgorithm.sortDecending(valueArray);
+         int[] sortedValue=insertionSortingAlgorithm.sortDecending(valueArray);
+         for (int i : sortedValue) {
+			System.out.println(i);
+		}
+         
+	}
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+E:\CodingWorkspace\New\project\Grocery_store\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2539696366.index
+\Grocery_Store_FrontEnd\src\main\java
+E:\CodingWorkspace\New\project\Grocery_store\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\242557949.index
+\Grocery_Store_Front_End\src\main\java
+E:\CodingWorkspace\New\project\Grocery_store\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2280754895.index
+\Grocery_Store_Web\src\main\java

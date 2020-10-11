@@ -1,0 +1,11 @@
+package main;
+
+import filter.BetterFilter;
+
+public class Demo {
+
+	BetterFilter bf = new BetterFilter();
+	    bf.
+	
+
+}

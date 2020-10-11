@@ -1,0 +1,21 @@
+package insertion_sorting_algorithm;
+
+public class InsertionSortingAlgorithm {
+	public int[] sortAccending(int[] values) {
+		for(int i=0;i<values.length;i++) {
+			int key=values[i];
+			for(int j=i+1;j<values.length-1;j++) {
+				if (values[j]<key) {
+					key=values[j];
+					values[j]=values[i];
+				}
+			}
+		}
+		return values;
+	}
+
+	public int[] sortDecending(int[] values) {
+
+		return values;
+	}
+}

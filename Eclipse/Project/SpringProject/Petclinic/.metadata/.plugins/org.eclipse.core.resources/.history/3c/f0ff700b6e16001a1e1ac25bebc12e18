@@ -1,0 +1,9 @@
+package org.Pet.Clinic.Data.services;
+
+import java.util.Set;
+
+import org.Pet.Clinic.Data.model.Vet;
+
+public interface VetService extends CrudService<Vet, String> {
+
+}

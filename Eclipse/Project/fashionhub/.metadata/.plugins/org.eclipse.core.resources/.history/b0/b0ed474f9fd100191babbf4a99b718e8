@@ -1,0 +1,19 @@
+package com.login.fashionhub.login.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.login.fashionhub.login.dto.UserCredentialDto;
+import com.login.fashionhub.login.repository.UserLoginRepo;
+import com.login.fashionhub.registration.repository.UserRepositoryRepo;
+
+public class LoginServiceImpl implements LoginService {
+	@Autowired
+	private UserLoginRepo loginRepository;
+
+	@Override
+	public String UserLogin(UserCredentialDto userDto) {
+
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.parking.service;
+
+import com.parking.domain.model.ParkingLot;
+import com.parking.dto.CarDto;
+import com.parking.dto.ParkingReceiptDto;
+
+public interface ParkingService {
+
+	public ParkingReceiptDto park(CarDto car,ParkingLot parkingLot);
+}

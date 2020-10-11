@@ -1,0 +1,5 @@
+package com.login.fashionhub.registration.dto;
+
+public class UserDetails {
+
+}

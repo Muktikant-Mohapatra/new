@@ -1,0 +1,19 @@
+package com.spring.ioc.controller;
+
+import com.spring.ioc.service.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class SetterInjectionController {
+    private GreetingService greetingService;
+
+    public String sayHello() {
+        return greetingService.greeting();
+    }
+
+    @Autowired
+    public void setGreetingService(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+}

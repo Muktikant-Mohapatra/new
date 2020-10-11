@@ -1,0 +1,9 @@
+package org.Pet.Clinic.Data.services;
+
+import java.util.Set;
+
+import org.Pet.Clinic.Data.model.Owner;
+
+public interface OwnerService extends CrudService<Owner, String> {
+
+}

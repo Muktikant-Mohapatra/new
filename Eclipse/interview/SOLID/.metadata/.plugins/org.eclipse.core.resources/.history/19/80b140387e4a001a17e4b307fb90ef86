@@ -1,0 +1,30 @@
+package satya;
+
+import java.io.IOException;
+
+public class Test {
+	public  int err() throws Exception
+	{
+		try 
+		{
+			throw new IOException("..");
+		}
+		
+			
+		catch(RuntimeException e)
+		{
+			throw new RuntimeException(e);
+			
+	    }
+	finally
+	{
+		return -1;
+	}		
+	}
+
+	public static void main(String[] args) {
+Test t=new Test();
+t.err();
+	}
+
+}

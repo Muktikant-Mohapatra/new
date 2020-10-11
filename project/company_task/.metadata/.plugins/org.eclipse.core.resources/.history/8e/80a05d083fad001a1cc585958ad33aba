@@ -1,0 +1,26 @@
+package com.parking.dto;
+
+import java.util.Arrays;
+import java.util.Date;
+
+public class ParkingReceiptDto {
+	private String id;
+	private CarDto[] car;
+	private int parkingSlot;
+	private Date entryTime;
+
+	public ParkingReceiptDto(String id, CarDto[] car, int parkingSlot, Date entryTime) {
+		super();
+		this.id = id;
+		this.car = car;
+		this.parkingSlot = parkingSlot;
+		this.entryTime = entryTime;
+	}
+
+	@Override
+	public String toString() {
+		return "ParkingReceiptDto [id=" + id + ", car=" + Arrays.toString(car) + ", parkingSlot=" + parkingSlot
+				+ ", entryTime=" + entryTime + "]";
+	}
+
+}

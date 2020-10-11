@@ -1,0 +1,65 @@
+package com.login.fashionhub.login.bo;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import com.login.fashionhub.registration.bo.AbstractIdGenerator;
+import com.login.fashionhub.registration.bo.UserDetailsBO;
+
+@Entity(name = "USER_LOGIN_CREDENTIAL")
+public class LoginDetailsBo extends AbstractIdGenerator {
+	@Column
+	private String location;
+	@Column
+	private Date loginTime;
+	@Column
+	private Date logoutTime;
+	
+	private UserDetailsBO userDetails;
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public Date getLoginTime() {
+		return loginTime;
+	}
+
+	public void setLoginTime(Date loginTime) {
+		this.loginTime = loginTime;
+	}
+
+	public Date getLogoutTime() {
+		return logoutTime;
+	}
+
+	public void setLogoutTime(Date logoutTime) {
+		this.logoutTime = logoutTime;
+	}
+
+	public UserDetailsBO getUserDetails() {
+		return userDetails;
+	}
+
+	@Override
+	public String toString() {
+		return "LoginDetailsBo [location=" + location + ", loginTime=" + loginTime + ", logoutTime=" + logoutTime
+				+ ", userDetails=" + userDetails + "]";
+	}
+/*
+ * @OneToMany
+	@JoinTable(name = "USER_LOGINS", joinColumns = {
+			@JoinColumn(name = "USER_LOGIN_CREDENTIAL_ID", referencedColumnName = "ID") }, inverseJoinColumns = {
+					@JoinColumn(name = "USER_LOGIN_TRACKING_ID", referencedColumnName = "ID") })
+ */
+}

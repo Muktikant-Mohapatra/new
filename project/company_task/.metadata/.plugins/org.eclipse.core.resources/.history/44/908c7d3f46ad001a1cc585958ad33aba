@@ -1,0 +1,27 @@
+package com.parking.main;
+
+import com.parking.domain.model.ParkingLot;
+import com.parking.dto.CarDto;
+import com.parking.service.CarParkingService;
+import com.parking.service.ParkingService;
+
+public class Parking {
+
+	public static void main(String[] args) {
+		ParkingLot parkingArea = new ParkingLot(5, "middle");
+		ParkingService service = new CarParkingService();
+		CarDto car1 = new CarDto("1234", "white");
+		CarDto car2 = new CarDto("4568", "red");
+		CarDto car3 = new CarDto("0000", "blue");
+		CarDto car4 = new CarDto("1111", "green");
+		CarDto car5 = new CarDto("5555", "violet");
+		    service.park(car1, parkingArea);
+			service.park(car2, parkingArea);
+			service.park(car3, parkingArea);
+			service.park(car4, parkingArea);
+			service.park(car4, parkingArea);
+			
+			service.emptySlot();
+
+	}
+}

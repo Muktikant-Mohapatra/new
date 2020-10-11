@@ -1,0 +1,10 @@
+package com.login.fashionhub.registration.service;
+
+import org.springframework.stereotype.Service;
+
+import com.login.fashionhub.registration.dto.UserDetailsDTO;
+
+
+public interface UserRegistrationService {
+	public String registerMember(UserDetailsDTO userDto);
+}

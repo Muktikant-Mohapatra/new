@@ -1,0 +1,5 @@
+package com.designPattern.factoryMethodDesignPattern;
+
+public class LibraryFactory {
+
+}

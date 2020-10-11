@@ -1,0 +1,6 @@
+package com.designPattern.factoryMethodDesignPattern;
+
+public interface Library {
+ private String name;
+ 
+}

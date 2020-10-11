@@ -1,0 +1,17 @@
+package org.Pet.Clinic.Web;
+
+import org.springframework.boot.SpringApplication;
+
+import com.spring.petclinic.PetClinicApplication;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	SpringApplication.run(App.class, args);
+    }
+}

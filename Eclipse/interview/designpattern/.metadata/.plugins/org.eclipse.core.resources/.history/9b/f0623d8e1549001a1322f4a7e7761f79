@@ -1,0 +1,11 @@
+package com.designPattern.factoryMethodDesignPattern;
+
+public class FactoryMethodPatternExample {
+
+	public static void main(String[] args) {
+		Library library=LibraryFactory.getLibrary("SUBASH BOSH");
+		System.out.println(library.getLibrary());
+
+	}
+
+}

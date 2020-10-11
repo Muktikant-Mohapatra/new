@@ -1,0 +1,24 @@
+package com.swaraj_packers.movers.user.registration.service;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.swaraj_packers.movers.user.registration.dao.RegistrationDao;
+import com.swaraj_packers.movers.user.registration.dto.RegistrationDto;
+
+public class RegistrationServiceImpl implements RegistrationService {
+	private RegistrationDao regDao;
+	private ModelMapper mapper;
+	@Autowired
+	public RegistrationServiceImpl(RegistrationDao regDao,ModelMapper mapper) {
+		super();
+		this.regDao = regDao;
+		this.mapper=mapper;
+	}
+
+	@Override
+	public RegistrationDto becomeMember(RegistrationDto requestedRegDto) {
+		RegistrationDto registeredUserDto=regDao.createMember(requestedRegDto);
+		return null;
+	}
+}

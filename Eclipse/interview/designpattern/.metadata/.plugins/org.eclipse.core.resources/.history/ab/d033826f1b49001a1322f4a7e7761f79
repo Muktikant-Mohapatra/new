@@ -1,0 +1,6 @@
+package com.designPattern.AbstractFactoryDesignPattern;
+
+public abstract class AbstractFactory {
+  public abstract Library getLibrary();
+  public abstract Student getStudent();
+}

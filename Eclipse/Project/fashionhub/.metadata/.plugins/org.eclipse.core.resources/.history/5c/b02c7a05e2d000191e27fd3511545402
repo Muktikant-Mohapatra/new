@@ -1,0 +1,7 @@
+package com.login.fashionhub.login.bo;
+
+import com.login.fashionhub.registration.bo.AbstractIdGenerator;
+
+public class LoginCredentialsBo extends AbstractIdGenerator {
+
+}

@@ -1,0 +1,55 @@
+package com.parking.dto;
+
+import java.util.Date;
+
+public class ParkingReceiptDto {
+	private String id;
+	private String registrationNumber;
+	private String colour;
+	private Date entryTime;
+
+	public ParkingReceiptDto(String id, Date entryTime) {
+		super();
+		this.id = id;
+		this.entryTime = entryTime;
+	}
+
+	public ParkingReceiptDto(String registrationNumber, String colour) {
+		super();
+		this.registrationNumber = registrationNumber;
+		this.colour = colour;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getRegistrationNumber() {
+		return registrationNumber;
+	}
+
+	public void setRegistrationNumber(String registrationNumber) {
+		this.registrationNumber = registrationNumber;
+	}
+
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+
+	public Date getEntryTime() {
+		return entryTime;
+	}
+
+	public void setEntryTime(Date entryTime) {
+		this.entryTime = entryTime;
+	}
+
+}

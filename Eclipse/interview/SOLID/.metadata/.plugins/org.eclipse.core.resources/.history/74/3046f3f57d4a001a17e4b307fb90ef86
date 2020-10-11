@@ -1,0 +1,38 @@
+package satya;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		B b=new B();
+		C c=new C();
+		b=c;
+		newPrint(b);
+	}
+	public static void newPrint(A a)
+	{
+		a.printName();
+	}}		
+ class A
+ {
+	 public void printName()
+	 {
+		 System.out.println("value-A");
+	 }}
+class B extends A
+{
+	public void printName()
+	{
+		System.out.println("value-B");
+	}
+}
+class C 
+{
+	public void printName()
+	{
+		System.out.println("value-c");
+	}
+}
+
+	
+
+

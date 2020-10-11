@@ -1,0 +1,11 @@
+package test;
+
+import selection_sorting_algorithm.SelectionSortingAlgorithm;
+
+public class AlgorithmTest {
+	public static void main(String[] args) {
+		int[] valueArray=new int[] {15,25,40,90,70,100,665};
+         SelectionSortingAlgorithm selectionSortingAlgorithm=new SelectionSortingAlgorithm();
+         selectionSortingAlgorithm.sort(valueArray);
+	}
+}

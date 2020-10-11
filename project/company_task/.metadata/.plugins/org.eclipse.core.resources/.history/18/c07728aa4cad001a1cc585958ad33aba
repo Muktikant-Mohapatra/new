@@ -1,0 +1,40 @@
+package com.parking.main;
+
+import java.util.Scanner;
+
+import com.parking.domain.model.Car;
+import com.parking.domain.model.ParkingLot;
+import com.parking.service.CarParkingService;
+import com.parking.service.ParkingService;
+
+public class Parking {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		/*
+		 * System.out.println("Enter Parking lot Size(In Number):"); String size =
+		 * scanner.nextLine();
+		 * System.out.println("Enter entry gate side (first,last,middle):"); String
+		 * entryGate = scanner.nextLine();
+		 */
+		ParkingLot parkingArea = new ParkingLot(10,first);
+		ParkingService service = new CarParkingService();
+		
+		System.out.println(" how many cars(In Number):");
+		String noOfCars = scanner.nextLine();
+		Car[] car = new Car[Integer.parseInt(noOfCars)];
+		for (int i = 0; i < car.length; i++) {
+			System.out.println(i + ": Car Registration Number:");
+			String registrationNumber = scanner.nextLine();
+			System.out.println(i + ": Car Colour:");
+			String colour = scanner.nextLine();
+			car[i] = new Car(registrationNumber, colour);
+		}
+		for (int i = 0; i < car.length; i++) {
+			service.park(car[i], parkingArea);
+		}
+
+		service.emptySlot();
+
+	}
+}

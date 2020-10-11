@@ -1,0 +1,13 @@
+package com.datastructure.arraylist;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ArrayList<String> al = new ArrayList<String>(3);
+		al.set(0,"kanha");
+		
+		al.print();
+		
+	}
+
+}

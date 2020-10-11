@@ -1,0 +1,63 @@
+package com.annotation;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+	@Autowired
+	private UserRepository rs;
+	@Autowired
+	private BookRepository br;
+	@Autowired
+	private PublisherRepository pr;
+
+	@GetMapping("/save")
+	public String saveUser() {
+		Publisher publisher = new Publisher();
+		publisher.setName("Hibernate Publisher");
+		Publisher publisher1 = new Publisher();
+		publisher1.setName("Spring Publisher");
+
+		Book book = new Book();
+		book.setName("Hibernate");
+		Book book1 = new Book();
+		book.setName("Spring");
+
+		Users user = new Users();
+		user.setName("Kanha");
+		book.setUser(user);
+		book1.setUser(user);
+
+		book.getPublisher().add(publisher1);
+		book.getPublisher().add(publisher);
+
+		book1.getPublisher().add(publisher1);
+		book1.getPublisher().add(publisher);
+
+		user.getBook().add(book1);
+		user.getBook().add(book);
+		br.save(book);
+		br.save(book1);
+		
+		pr.save(publisher);
+		pr.save(publisher1);
+		rs.save(user);
+		return "success";
+	}
+
+	@GetMapping("/show/{id}")
+	public Users showUser(@PathVariable String id) {
+		Optional<Users> findById = rs.findById(id);
+		Users userEntity = findById.get();
+		Users request = new Users();
+		request.setId(userEntity.getId());
+		request.setName(userEntity.getName());
+		request.setBook(userEntity.getBook());
+		return request;
+	}
+}

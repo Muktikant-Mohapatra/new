@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+E:\CodingWorkspace\New\Eclipse\Udemy\Spring-BeginnerToGuru\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\833971360.index
+\demo\src\main\resources
+E:\CodingWorkspace\New\Eclipse\Udemy\Spring-BeginnerToGuru\Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\601597223.index
+\demo\src\main\resources

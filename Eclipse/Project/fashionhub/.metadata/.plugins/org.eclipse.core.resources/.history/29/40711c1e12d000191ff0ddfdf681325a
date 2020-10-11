@@ -1,0 +1,13 @@
+package com.login.fashionhub.registration.service;
+
+import com.login.fashionhub.registration.dto.UserDetailsDTO;
+
+public class UserRegistrationServiceImpl implements UserRegistrationService {
+
+	@Override
+	public String registerMember(UserDetailsDTO userDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

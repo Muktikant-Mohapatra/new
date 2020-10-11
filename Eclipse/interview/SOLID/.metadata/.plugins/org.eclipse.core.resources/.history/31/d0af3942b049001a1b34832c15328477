@@ -1,0 +1,15 @@
+package filter;
+
+import java.util.List;
+
+import product.Product;
+import specification.Specification;
+
+public class BetterFilter implements Filter<Product>{
+
+	@Override
+	public List<Product> filter(List<Product> items, Specification<Product> spec) {
+        
+		return null;
+	} 
+}

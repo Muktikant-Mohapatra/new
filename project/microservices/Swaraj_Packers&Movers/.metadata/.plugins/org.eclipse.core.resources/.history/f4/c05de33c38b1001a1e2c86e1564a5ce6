@@ -1,0 +1,50 @@
+package com.swaraj_packers.movers.user.controller;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.validation.Valid;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.swaraj_packers.movers.user.registration.dto.RegistrationDto;
+import com.swaraj_packers.movers.user.registration.request.RegistrationRequestModel;
+import com.swaraj_packers.movers.user.registration.response.RegistrationResponseModel;
+import com.swaraj_packers.movers.user.registration.service.RegistrationService;
+
+@RestController
+@RequestMapping("/users")
+public class RegistrationController {
+
+	private RegistrationService registrationService;
+    @Autowired
+	private ModelMapper mapper;
+	@Autowired
+	public RegistrationController(RegistrationService registrationService) {
+		super();
+		this.registrationService = registrationService;
+	}
+
+	@PostMapping
+	public ResponseEntity<RegistrationResponseModel> register(@Valid @RequestBody RegistrationRequestModel requestModel) {
+		
+		RegistrationDto requestedRegUserDto=mapper.map(requestModel, RegistrationDto.class);
+	    try {
+			requestedRegUserDto.setDateOfBirth(new SimpleDateFormat("dd/mm/yy").parse(requestModel.getDateOfBirth()));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		mapper=new ModelMapper();
+		RegistrationDto registeredUserDto = registrationService.becomeMember(requestedRegUserDto);
+		RegistrationResponseModel responseModel = mapper.map(registeredUserDto, RegistrationResponseModel.class);;
+		return new ResponseEntity<RegistrationResponseModel>(responseModel, HttpStatus.CREATED);
+	}
+}

@@ -1,0 +1,5 @@
+package com.parking.dto;
+
+public class ParkingReceiptDto {
+
+}

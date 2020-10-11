@@ -1,0 +1,5 @@
+package com.login.fashionhub.registration.bo;
+
+public class UserDetailsBO {
+
+}

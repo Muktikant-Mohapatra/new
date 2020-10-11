@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CheckID</string>
+    <string name="hint_id">Please Enter the ID number</string>
+</resources>

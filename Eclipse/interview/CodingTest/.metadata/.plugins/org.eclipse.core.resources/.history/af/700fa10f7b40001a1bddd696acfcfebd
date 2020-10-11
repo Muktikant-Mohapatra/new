@@ -1,0 +1,29 @@
+package interviewQuestions.interview;
+
+import java.util.Arrays;
+
+public class B {
+	static int sockMerchant(int[] ar) {
+	      int count=0;
+	      Arrays.sort(ar);
+	      for(int i=0;i<ar.length;i++){
+	        int dupCount=0;
+	        for(int j=i+1;j<ar.length;j++){
+	          
+	          if(ar[i]==ar[j]){
+	           dupCount++;
+	          }else{
+	            break;
+	          }
+	          count=count+dupCount/2;
+	        }
+	      }      
+	      return count;
+	    }
+	public static void main(String[] args) {
+      int arr[]= {1,2,3,1,2,3,1,2,3,1,2,3};
+      int count=sockMerchant( arr);
+      System.out.println(count);
+	}
+
+}

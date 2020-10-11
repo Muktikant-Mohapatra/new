@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.designPattern.factoryMethodDesignPattern.MadhusudhanLibrary"/>
+<fullyQualifiedTypeName name="com.designPattern.factoryMethodDesignPattern.SubashBoshLibrary"/>
+<fullyQualifiedTypeName name="com.designPattern.factoryMethodDesignPattern.Library"/>
+<fullyQualifiedTypeName name="com.designPattern.factoryMethodDesignPattern.LibraryFactory"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.Ram"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.Hari"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.LibraryFactory"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.StudentFactory"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.Library"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.AbstractFactory"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.FactoryCreator"/>
+<fullyQualifiedTypeName name="com.designPattern.AbstractFactoryDesignPattern.Student"/>
+</qualifiedTypeNameHistroy>

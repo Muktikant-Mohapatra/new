@@ -1,0 +1,15 @@
+package product;
+
+public class Product {
+	private String name;
+	private Size size;
+	private Colour colour;
+
+	public Product(String name, Size size, Colour colour) {
+		super();
+		this.name = name;
+		this.size = size;
+		this.colour = colour;
+	}
+
+}

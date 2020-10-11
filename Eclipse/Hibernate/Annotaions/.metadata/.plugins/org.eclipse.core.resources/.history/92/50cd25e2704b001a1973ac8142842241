@@ -1,0 +1,24 @@
+package com.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+	@Autowired
+	private UserRepository rs;
+	@Autowired
+	private BookRepository br;
+    @GetMapping("/save")
+	public String saveUser() {
+    	Book book=new Book();
+    	book.setName("Hibernate");
+    	UserEntity user=new UserEntity();
+    	user.setName("Kanha");
+    	user.setBook(book);
+    	br.save(book);
+    	rs.save(user);
+		return "success";
+	}
+}

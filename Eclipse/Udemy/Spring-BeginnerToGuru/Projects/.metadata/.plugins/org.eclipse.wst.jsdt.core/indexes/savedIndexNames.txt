@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+E:\CodingWorkspace\New\Eclipse\Udemy\Spring-BeginnerToGuru\Projects\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1646448153.index
+64096986.index
+1263001550.index
+1484706628.index
+3163743311.index
+833971360.index
+3435648363.index

@@ -1,0 +1,57 @@
+package com.annotation;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+	@Autowired
+	private UserRepository rs;
+	@Autowired
+	private BookRepository br;
+	@Autowired
+	private PublisherRepository pr;
+
+	@GetMapping("/save")
+	public String saveUser() {
+		Publisher publisher = new Publisher();
+		publisher.setName("Hibernate Publisher");
+		Publisher publisher1 = new Publisher();
+		publisher1.setName("Spring Publisher");
+
+		Book book = new Book();
+		book.setName("Hibernate");
+		Book book1 = new Book();
+		book1.setName("Spring");
+
+		Users user = new Users();
+		user.setName("Kanha");
+		book.setUser(user);
+		book1.setUser(user);
+		user.getBook().add(book);
+
+		book.getPublisher().add(publisher);
+
+		
+
+		rs.save(user);
+		br.save(book);
+		
+		return "success";
+	}
+
+	@GetMapping("/show/{id}")
+	public Users showUser(@PathVariable String id) {
+		Optional<Users> findById = rs.findById(id);
+		Users userEntity = findById.get();
+		Users request = new Users();
+		request.setId(userEntity.getId());
+		request.setName(userEntity.getName());
+		request.setBook(userEntity.getBook());
+		return request;
+	}
+}

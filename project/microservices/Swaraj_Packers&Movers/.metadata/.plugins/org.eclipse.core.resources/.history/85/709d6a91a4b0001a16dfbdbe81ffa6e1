@@ -1,0 +1,15 @@
+package com.swaraj_packers.movers.user;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan(basePackageClasses = com.swaraj_packers.movers.user.registrationAndLogin.security.WebSecurityConfig.class)
+public class UserRegistrationAndLoginModuleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UserRegistrationAndLoginModuleApplication.class, args);
+	}
+
+}

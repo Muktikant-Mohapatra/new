@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+E:\CodingWorkspace\New\STS\Udemy\Projects\.metadata\.plugins\org.eclipse.jdt.core
+2637550753.index

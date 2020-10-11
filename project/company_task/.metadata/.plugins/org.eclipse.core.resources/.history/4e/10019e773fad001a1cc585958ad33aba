@@ -1,0 +1,14 @@
+package com.parking.service;
+
+import com.parking.domain.model.ParkingLot;
+import com.parking.dto.CarDto;
+import com.parking.dto.ParkingReceiptDto;
+import com.parking.exception.NoVechicleException;
+import com.parking.exception.ParkingLotFullException;
+
+public interface ParkingService {
+
+	public void park(CarDto car, ParkingLot parkingLot) throws ParkingLotFullException;
+
+	public void unPark(int parkingSlotNumber) throws NoVechicleException;
+}

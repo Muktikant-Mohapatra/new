@@ -1,0 +1,50 @@
+package com.login.fashionhub.registration.service;
+
+import java.sql.Date;
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.login.fashionhub.login.bo.LoginDetailsBo;
+import com.login.fashionhub.registration.bo.UserDetailsBO;
+import com.login.fashionhub.registration.dto.UserDetailsDTO;
+import com.login.fashionhub.registration.repository.UserRepositoryRepo;
+@Service
+public class UserRegistrationServiceImpl implements UserRegistrationService {
+
+	@Autowired
+	private UserRepositoryRepo userRepository;
+	
+	
+	@Override
+	public String registerMember(UserDetailsDTO userDto) {
+       
+		UserDetailsBO userBo=new UserDetailsBO();
+        userBo.setName(userDto.getName());
+        userBo.setGender(userDto.getGender());
+        userBo.setDob(userDto.getDob());
+        userBo.setEmail(userDto.getEmail());
+        userBo.setPhone(userDto.getPhone());
+        userBo.setPassword(userDto.getPassword());
+        LoginDetailsBo loginDetails=new LoginDetailsBo();
+        loginDetails.setLocation("India");
+        loginDetails.setLoginTime(Date.valueOf(LocalDate.now()));
+        loginDetails.setLogoutTime(Date.valueOf(LocalDate.now()));
+		userBo.setLoginDetails(loginDetails);
+        /*
+		 * DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/mm/yyyy"); LocalDate
+		 * date=LocalDate.now();
+		 */
+        //userBo.setAge(date-userDto.getDob());
+        if (userBo!=null) {
+        	
+        	UserDetailsBO saveUser = userRepository.save(userBo);
+			if (saveUser!=null) {
+				return "Successful";
+			}
+		}
+		return "unsuccessful";
+	}
+
+}
